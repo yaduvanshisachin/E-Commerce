@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Category from './component/Category'
 import axios from 'axios'
+import ProductItem from './component/ProductItem';
 
 function App() {
   const [finalCategory, setFinalCategory] = useState([]);
@@ -62,7 +63,7 @@ function App() {
       <div className='max-w-[1320px] mx-auto'>
         <h1 className='text-center text-[40px] font-bold mb-[20px]'>Our Product</h1>
         <div className='grid grid-cols-[30%_auto] gap-[20px]'>
-          <div className='rounded-[10px]'>
+          <div className='rounded-[10px] w-[250px] bg-[#f8f8f8] '>
             {/* {finalCategory.length} */}
             <Category finalCategory={finalCategory} setCatName={setCatName}/>
           </div>
@@ -80,15 +81,15 @@ function App() {
 
 export default App
 
-function ProductItem({pdata}) {
-  return (
-    <div className='bg-white rounded-[10px] shadow-lg p-[20px] text-center cursor-pointer'>
-      <img src={pdata.thumbnail} alt="Product 1" className='w-[100] h-[220px] object-cover' />
-      <h3 className='text-[20px] font-semibold mt-[10px]'>{pdata.title}</h3>
-      <p className='text-gray-600'> Rs. {pdata.price}</p>
-    </div>
-  )
-}
+// function ProductItem({pdata}) {
+//   return (
+//     <div className='bg-white rounded-[10px] shadow-lg p-[20px] text-center cursor-pointer'>
+//       <img src={pdata.thumbnail} alt="Product 1" className='w-[100] h-[220px] object-cover' />
+//       <h3 className='text-[20px] font-semibold mt-[10px]'>{pdata.title}</h3>
+//       <p className='text-gray-600'> Rs. {pdata.price}</p>
+//     </div>
+//   )
+// }
 //'https://dummyjson.com/products'
 // 'https://dummyjson.com/products/category-list'
 // `https://dummyjson.com/products/category/${catName}`

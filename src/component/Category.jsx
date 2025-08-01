@@ -9,8 +9,8 @@ export default function Category({finalCategory, setCatName}) {
 
   return (
     <div>
-      <h3 className='text-[25px] font-[500] p-[10px]'>Product </h3>
-      <ul>
+      <h3 className='text-[25px] font-[500] p-[10px]'>Category </h3>
+      <ul className='h-[calc(100vh-120px)] overflow-y-auto'>
         {/* <li className='p-[10px] hover:bg-[#f0f0f0] cursor-pointer font-serif'>Product 1</li>
         <li className='p-[10px] hover:bg-[#f0f0f0] cursor-pointer font-serif'>Product 2</li>
         <li className='p-[10px] hover:bg-[#f0f0f0] cursor-pointer font-serif'>Product 3</li>
